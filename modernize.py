@@ -3,7 +3,7 @@
 import re
 import os
 
-INCLUDE = "#include [<"](?:cstdio|stdio\.h)[>"]"
+INCLUDE = "#include [<\"](?:cstdio|stdio\.h)[>\"]"
 PRINTF_CALL = 'printf\s*\((?P<tokens>".*")(?P<args>.*)\)'
 PRINTF_TOKENS = '(?P<token>%[-\+ #0]?(?:\d+(?:\.\d+)?)?[hljztL]?[hl]?[diuoxXfFeEgGaAspn])'
 PRINTF_ARGUMENTS = '(?:,\s*(?P<arg>[^,;]+))'
